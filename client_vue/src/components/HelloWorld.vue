@@ -76,12 +76,23 @@ export default {
         .catch(function (error) {
           console.log(error);
         });
+      },
+       testDelete: function(){
+          // axios.get('http://rest/user6/rest_task1/client/api/cars/1', this.config)
+          axios.delete('http://192.168.0.15/~user15/REST/client/api/cars/1/', this.config)
+            .then(function (response) {
+            console.log(response.data);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
       }
   },
   created(){
     //this.testGet()
-   // this.testPost()
-    this.testPut()
+   //this.testPost()
+    //this.testPut()
+    this.testDelete()
   }
 }
 </script>
